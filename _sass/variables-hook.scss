@@ -1,0 +1,76 @@
+/*
+  Appending custom SCSS variables will override the default ones in `_sass/addon/variables.scsss`
+*/
+
+// Nord color palette
+$nord0: #2E3440;
+$nord1: #3B4252;
+$nord2: #434C5E;
+$nord3: #4C566A;
+$nord4: #D8DEE9;
+$nord5: #E5E9F0;
+$nord6: #ECEFF4;
+$nord7: #8FBCBB;
+$nord8: #88C0D0;
+$nord9: #81A1C1;
+$nord10: #5E81AC;
+$nord11: #BF616A;
+$nord12: #D08770;
+$nord13: #EBCB8B;
+$nord14: #A3BE8C;
+$nord15: #B48EAD;
+
+// Override Chirpy dark mode variables
+@mixin dark-scheme {
+  --body-bg: #{$nord0};
+
+  //body and font
+  --main-bg: #{$nord0};
+  // --text-color: #{$nord4};  // Main text color
+  // --text-muted-color: #{$nord3};  // Muted text color
+  // --heading-color: #{$nord6};  // Heading color
+  
+
+  //sidebar and font
+  --sidebar-bg: #{$nord1};
+  --sidebar-muted-color: #{$nord4};
+  --sidebar-active-color: #{$nord6};
+  
+  //font
+
+  --text-color: #{$nord6};  // This is the lightest Nord color, almost white
+  --text-muted-color: #{$nord4};  // A slightly darker shade for muted text
+  --heading-color: #ffffff;  // Pure white for headings
+
+
+
+  // --text-color: #{$nord4};
+  // --text-muted-color: #{$nord3};
+  // --heading-color: #{$nord6};
+  --link-color: #{$nord8};
+  --link-underline-color: #{$nord8};
+  --main-border-color: #{$nord1};
+  --button-bg: #{$nord2};
+  --btn-border-color: #{$nord4};
+  --btn-backtotop-color: #{$nord4};
+  --btn-backtotop-border-color: #{$nord2};
+  --btn-box-shadow: #{$nord0};
+  --card-header-bg: #{$nord1};
+  --label-color: #{$nord7};
+  --checkbox-color: #{$nord9};
+  --checkbox-checked-color: #{$nord7};
+  --img-bg: radial-gradient(circle, rgb(39, 43, 53) 0%, rgb(46, 52, 64) 100%);
+  --categories-border: rgba(84, 110, 155, 0.3);
+  --categories-hover-bg: #{$nord2};
+  --timeline-node-bg: #{$nord7};
+  --blockquote-border-color: #{$nord7};
+  --blockquote-text-color: #{$nord4};
+  --prompt-tip-bg: rgba(91, 192, 222, 0.1);
+  --prompt-tip-icon-color: rgb(91, 192, 222);
+  --prompt-info-bg: rgba(102, 187, 106, 0.1);
+  --prompt-info-icon-color: rgb(102, 187, 106);
+  --prompt-warning-bg: rgba(255, 193, 7, 0.1);
+  --prompt-warning-icon-color: rgb(255, 193, 7);
+  --prompt-danger-bg: rgba(244, 67, 54, 0.1);
+  --prompt-danger-icon-color: rgb(244, 67, 54);
+}
