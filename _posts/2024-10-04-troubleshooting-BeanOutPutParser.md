@@ -5,17 +5,33 @@ categories: [Top Category, Sub Category]
 tags: [java, SpringBoot]
 ---
 
-
 # Exploring BeanOutputParser for Java Object Creation
 
-## Objective:
-To achieve better results using the BeanOutputParser method for creating Java objects.
+>  **Disclaimer:**  
+> As of **May 2, 2024**, the `BeanOutputParser` class — along with `OutputParser`, `ListOutputParser`, and `MapOutputParser` — has been **deprecated** in the Spring AI framework.  
+> These classes have been replaced by `StructuredOutputConverter`, `BeanOutputConverter`, `ListOutputConverter`, and `MapOutputConverter`, which are **drop-in replacements** and align more closely with the `org.springframework.core.convert.converter` package.
+> 
+ While the naming has changed (since no actual “parsing” is being done), the new converters offer the same or improved functionality. Most of the strategies discussed in this post **still apply**.
+> 
+> 📖 **See more at**: [Spring AI – Structured Output Converter Docs](https://docs.spring.io/spring-ai/reference/api/structured-output-converter.html)
+>
+> I’ll be updating my project to use the new approach and will publish a follow-up post documenting the migration process and any new findings.
 
-## Current Status:
-I have created a project utilizing the BeanOutputParser method, but the results are inconsistent. To address this issue, I plan to explore several strategies to improve the consistency of the output. I have tried some of these methods and the 
-the final result is definetely improved, I am expecting further improvements as i implement these methods.
+---
 
-## Strategies to Improve Consistency:
+## Objective
+
+To achieve better results using the `BeanOutputParser` method for creating Java objects from LLM-generated output.
+
+---
+
+## Current Status
+
+I’ve built a project using `BeanOutputParser`, but the results have been inconsistent. To improve the reliability and accuracy of object generation, I’ve explored a variety of strategies — some of which have already improved the results. I expect further gains as I implement the rest.
+
+---
+
+## 🛠 Strategies to Improve Consistency
 
 ### 1. Crafting a Better Prompt
 
